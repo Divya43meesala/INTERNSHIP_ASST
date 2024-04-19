@@ -1,0 +1,32 @@
+/* Default styles for modal content */
+.modal-content {
+  max-height: 97vh; /* Adjust this value as needed */
+}
+
+/* Media query for screens up to 576px (mobile) */
+@media (max-width: 576px) {
+  .modal-content {
+    max-height: 100vh; /* Adjust this value as needed */
+    width: 100%; /* Set width to 100% for mobile */
+  }
+  .modal .modal-body .container .row .col-md-6:nth-child(2) {
+    display: none; /* Hide the second column containing images */
+  }
+}
+
+
+/* Media query for screens larger than 992px (desktop) */
+@media (min-width: 993px) {
+  .modal-content {
+    width: 100%; /* Adjust the width as needed for desktop */
+    max-width: 1000px; /* Optional: Set a maximum width */
+    margin: 0 auto; /* Optional: Center the modal content horizontally */
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-content{
+    height:88vh;
+    overflow-y: hidden;
+  }
+}

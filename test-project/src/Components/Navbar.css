@@ -1,0 +1,44 @@
+/* Navbar.css */
+.navbar-wrapper {
+  padding: 20px; /* Adjust padding as needed */
+}
+
+.NavLink-underline {
+  text-decoration: none;
+  position: relative;
+}
+
+.NavLink-underline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: transparent; /* Initial color */
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.NavLink-underline:hover::after,
+.NavLink-underline.active::after { /* Add active styles */
+  visibility: visible;
+  transform: scaleX(1);
+  background-color: #000; /* Black color for active item */
+}
+.post-container{
+  width:65vw;
+}
+.small-container {
+  width: 100%; /* Set the initial width to 100% */
+}
+
+@media (max-width: 768px) {
+  .small-container {
+    width: auto; /* Override width to 'auto' on screens smaller than 768px */
+  }
+  .post-container{
+    width:100vw;
+  }
+}
